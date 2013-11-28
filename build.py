@@ -24,6 +24,6 @@ def process(inputname, outputname):
 
 for baseName, subDirs, files in os.walk("src/"):
   for inputname in files:
-    outputname = (inputname.rstrip(".md") + ".html").lstrip("src/")
+    outputname = "html/" + (inputname.rstrip(".md") + ".html").lstrip("src/")
     inputname = baseName + inputname
     process(inputname, outputname)
