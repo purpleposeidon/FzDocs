@@ -15,3 +15,9 @@ a {
 h1, h2, h3 {
   color: black;
 }
+
+img {
+  background-color: black;
+  padding: 1px;
+  border: 1px solid purple;
+}
