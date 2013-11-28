@@ -1,0 +1,17 @@
+body {
+  font-family: "sans";
+  background-color: white;
+  color: #666666;
+  font-size: larger;
+  width: 60%;
+  margin-left: 20%;
+  
+}
+
+a {
+  color: #4183C4;
+}
+
+h1, h2, h3 {
+  color: black;
+}
