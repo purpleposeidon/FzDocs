@@ -8,5 +8,64 @@
 <body>
 <h1>Servos</h1>
 
+<p><img src="screen/servo.png" alt="A sugar-cane harvesting servo" title="" /></p>
+
+<p>Servos are entities that ride on Servo Rail.
+They can be equiped with a socket tool, and provide a four-slot inventory.</p>
+
+<h2>Servo Rail</h2>
+
+<p>Servo rail is the conductive wire that servos ride on. Charge is drawn from the servo rails to power the servo and its socket tool.
+Instructions (and decorators) can be placed on servo rail.
+Servos travel along the servo rail, and execute instructions as they pass over them.</p>
+
+<h2>Instructions</h2>
+
+<p>Instructions can be placed infinitely on servo rails.
+The Logic Matrix Programmer is used to modify and remove them.</p>
+
+<p>Shift-right clicking with an LMP will remove it from the rail.
+Right clicking an instruction will cycle it to a different version of it.
+Clicking on an instruction empty-handed <em>may</em> show a notification indicating its state.</p>
+
+<p>For details on specific instructions, see the <a href="instructions.html">Instructions</a> page.</p>
+
+<h2>Decorators</h2>
+
+<p>Decorators are similar to instructions, except they are single-use.
+Presently the only decorators are the three grates; their purposes is to plug up holes in the floor.</p>
+
+<h2>Servo Motion</h2>
+
+<p>When confronted with a rail junction, the servo has a choice of which direction to go.</p>
+
+<ol>
+<li><p>If there is an entry control <img src="textures/blocks/servo/entry_require.png" alt="Green Checkmark" title="" /> instruction, it will go that way.</p></li>
+<li><p>If it has encountered a <img src="textures/blocks/servo/set_direction_side_E.png" alt="Set Direction" title="" /> that it could not execute, it will go in that direction.</p></li>
+<li><p>It prefers to go straight.</p></li>
+<li><p>It tries to go in the direction it was moving previously (this makes it zig-zag). For example, if it reaches a T intersection after a left turn, it will go right.</p></li>
+<li><p>If it can not go straight, then it will try to go up (relative to the servo), or down.</p></li>
+<li><p>Failing that, it will go right or left, at random.</p></li>
+<li><p>It avoids going through a forbidding entry control <img src="textures/blocks/servo/entry_forbid.png" alt="Red x mark" title="" />; this is the second-to-last resort.</p></li>
+<li><p>It won't go backwards unless it is at a dead-end.</p></li>
+</ol>
+
+<p><small><i>(Probably.)</i></small></p>
+
+<h2>Computation</h2>
+
+<p>Not yet implemented.</p>
+
+<p>Each servo has 16 seperate stacks, one for each wool color in Minecraft.
+Each stack can hold 16 values.
+Looking at a servo while holding an LMP will show the contents of the stacks.</p>
+
+<p>At present only two stacks are used.
+The yellow stack is used for values, and the black stack is used for error messages.</p>
+
+<h2>Examples</h2>
+
+<p>[sorting system; sugar cane harvester...]</p>
+
 </body>
 </html>

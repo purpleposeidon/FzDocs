@@ -1,0 +1,116 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Factorization Documentation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<h1>Instructions Reference</h1>
+
+<h2>Motion</h2>
+
+<p><img src="textures/blocks/servo/entry_require.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/entry_forbid.png" alt="Instruction" title="" />
+<strong>Entry Control</strong>: Servos are attracted to the green check, and repelled by the red x.</p>
+
+<p><img src="textures/blocks/servo/set_direction_side_E.png" alt="Instruction" title="" />
+(<img src="textures/blocks/servo/set_direction_back.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/set_direction_front.png" alt="Instruction" title="" />)
+<strong>Set Direction</strong>: Makes the servo move in the specified direction.
+This can make the servo reverse direction. 
+If it points the servo in a direction it can not go (because there is no servo rail),
+it will move in that direction at the next possible opportunity (Pacman-style).</p>
+
+<p><img src="textures/blocks/servo/set_facing_side_E.png" alt="Instruction" title="" />
+(<img src="textures/blocks/servo/set_facing_back.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/set_facing_front.png" alt="Instruction" title="" />)
+<strong>Point Top</strong>: Sets the top of the servo.
+It does not make sense to point the top parallel to the direction of motion</p>
+
+<p><img src="textures/blocks/servo/speed1.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/speed2.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/speed3.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/speed4.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/speed5.png" alt="Instruction" title="" />
+<strong>Set Speed</strong>: Sets the servo speed.
+Speed 3 is the default speed.</p>
+
+<p><img src="textures/blocks/servo/spin_ccc.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/spin_cc.png" alt="Instruction" title="" />
+<strong>Spin</strong>: Spin clockwise or counter-clockwise.
+If a servo passes over one, and then reverses direction and passes over it again,
+it will be facing in the original direction.</p>
+
+<p><img src="textures/blocks/servo/trap.png" alt="Instruction" title="" />
+<strong>Trap</strong>: Stops the servo motor.
+It will resume motion when given a redstone signal.
+Sockets will continue to operate.</p>
+
+<h2>Socket</h2>
+
+<p><img src="textures/blocks/servo/socket_pulse.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/socket_on.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/socket_off.png" alt="Instruction" title="" />
+<strong>Socket Control</strong>: Sends a redstone signal to the socket.
+"Socket On" and "Socket Off" switch the redstone signal on or off.
+Pulse will send a redstone pulse to the socket.
+If a pulse is used while already on, then it will pulse off.</p>
+
+<p><strong>Item Shifter Control</strong>: Changes settings in the Item Shifter;
+this allows control of the same settings that are in <a href="sockets.html#shifter">the GUI</a>.</p>
+
+<ul>
+<li><p><img src="textures/blocks/servo/ctrl/shift_export.png" alt="Instruction" title="" /> Export Mode</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_import.png" alt="Instruction" title="" /> Import Mode</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_pulse_exact.png" alt="Instruction" title="" /> Pulse Exact</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_pulse_some.png" alt="Instruction" title="" /> Pulse Some</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_stream.png" alt="Instruction" title="" /> Stream</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_target_slot.png" alt="Instruction" title="" /> Target Slot; set with an integer popped from the stack.</p></li>
+<li><p><img src="textures/blocks/servo/ctrl/shift_transfer_limit.png" alt="Instruction" title="" /> Transfer Limit; set with an integer popped from the stack.</p></li>
+</ul>
+
+<h2>Math and Logic</h2>
+
+<p><img src="textures/blocks/servo/cmp_eq.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/cmp_ge.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/cmp_gt.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/cmp_le.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/cmp_lt.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/cmp_ne.png" alt="Instruction" title="" />
+<strong>Compare</strong>: Pops two integers from the stack and compares them.
+(The blue underline indicates the bottom of the icon)</p>
+
+<p><img src="textures/blocks/servo/true.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/false.png" alt="Instruction" title="" />
+<strong>Boolean Value</strong>: Pushes <code>true</code> or <code>false</code>.</p>
+
+<p><img src="textures/blocks/servo/one.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/zero.png" alt="Instruction" title="" />
+<img src="textures/blocks/servo/number.png" alt="Instruction" title="" />
+<strong>Integer Value</strong>: Pushes <code>1</code> or <code>0</code>. (The # is presently not available.)</p>
+
+<p><img src="textures/blocks/servo/sum.png" alt="Instruction" title="" />
+<strong>Sum</strong>: Sum two integers popped from the stack, and push the value onto the stack.</p>
+
+<p><img src="textures/blocks/servo/product.png" alt="Instruction" title="" />
+<strong>Product</strong>: Multiply two integers popped from the stack, and push the value onto the stack.</p>
+
+<h2>Stack</h2>
+
+<p><img src="textures/blocks/servo/drop.png" alt="Instruction" title="" />
+<strong>Drop</strong>: Pop a value from the stack, and do nothing with it.</p>
+
+<p><img src="textures/blocks/servo/dup.png" alt="Instruction" title="" />
+<strong>Dup</strong>: Duplicates the top value of the stack.</p>
+
+<h2>Other</h2>
+
+<p><img src="textures/blocks/servo/pulse.png" alt="Instruction" title="" />
+<strong>Redstone Pulse</strong>: Emits a redstone pulse from the rail.</p>
+
+<p><img src="textures/blocks/servo/jmp.png" alt="Instruction" title="" />
+<strong>Jump</strong>: Pop a boolean from the stack. If it is true, then the next instruction is skipped.</p>
+
+</body>
+</html>
