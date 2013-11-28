@@ -7,3 +7,6 @@ Factorization Documentation
 [Instructions](instructions.html)
 
 [Parasieve](parasieve.html)
+
+[Compression Crafter](compact.html)
+
