@@ -7,8 +7,10 @@ def process(inputname, outputname):
   out = subprocess.Popen(["markdown", inputname], stdout=subprocess.PIPE).stdout.read()
   fd = open(outputname, 'w')
   fd.write(
-"""<html>
+"""<!DOCTYPE HTML>
+<html>
 <head>
+  <meta charset="UTF-8">
   <title>Factorization Documentation</title>
   <link rel="stylesheet" href="style.css" />
 </head>
