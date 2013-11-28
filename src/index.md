@@ -10,3 +10,4 @@ Factorization Documentation
 
 [Compression Crafter](compact.html)
 
+[Miscellaneous Nonsense](misc.html)
