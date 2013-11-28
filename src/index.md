@@ -1,5 +1,6 @@
 Factorization Documentation
 ===========================
+[Sockets](sockets.html)
 
 [Servos](servos.html)
 
