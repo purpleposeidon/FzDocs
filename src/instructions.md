@@ -42,13 +42,13 @@ Sockets will continue to operate.
 
 Socket
 ------
-![Instruction](textures/blocks/servo/socket_pulse.png)
-![Instruction](textures/blocks/servo/socket_on.png)
-![Instruction](textures/blocks/servo/socket_off.png)
-__Socket Control__: Sends a redstone signal to the socket.
-"Socket On" and "Socket Off" switch the redstone signal on or off.
-Pulse will send a redstone pulse to the socket.
-If a pulse is used while already on, then it will pulse off.
+__Socket Control__: Controls the redstone signal sent to the socket.
+
+* ![Instruction](textures/blocks/servo/socket_on.png) Turns on a steady redstone signal.
+
+* ![Instruction](textures/blocks/servo/socket_off.png) Turns off a steady redstone signal.
+
+* ![Instruction](textures/blocks/servo/socket_pulse.png) Pulses the signal. If the signal is steady on, it will flicker instead.
 
 __Item Shifter Control__: Changes settings in the Item Shifter;
 this allows control of the same settings that are in [the GUI](sockets.html#shifter).
@@ -77,7 +77,7 @@ Math and Logic
 ![Instruction](textures/blocks/servo/cmp_lt.png)
 ![Instruction](textures/blocks/servo/cmp_ne.png)
 __Compare__: Pops two integers from the stack and compares them.
-(The blue underline indicates the bottom of the icon)
+(The cyan underline indicates the bottom of the icon.)
 
 ![Instruction](textures/blocks/servo/true.png)
 ![Instruction](textures/blocks/servo/false.png)
@@ -107,5 +107,13 @@ Other
 ![Instruction](textures/blocks/servo/pulse.png)
 __Redstone Pulse__: Emits a redstone pulse from the rail.
 
-![Instruction](textures/blocks/servo/jmp.png)
-__Jump__: Pop a boolean from the stack. If it is true, then the next instruction is skipped.
+__Jump__: 
+
+* ![Instruction](textures/blocks/servo/jmp_instruction.png)
+Pop a boolean from the stack.
+If it is true, then the next found instruction is jumped over.
+
+* ![Instruction](textures/blocks/servo/jmp_tile.png)
+Unconditionally skip the instruction on the next (adjacent) servo rail.
+If the next servo rail is empty, then there will be no effect.
+
