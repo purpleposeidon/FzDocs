@@ -17,7 +17,7 @@ Instructions can be placed infinitely on servo rails.
 The Logic Matrix Programmer is used to modify and remove them.
 
 Shift-right clicking with an LMP will remove it from the rail.
-Right clicking an instruction will cycle it to a different version of it.
+Right clicking an instruction will cycle through variants of the instruction, if that instruction has them.
 Clicking on an instruction empty-handed _may_ show a notification indicating its state.
 
 For details on specific instructions, see the [Instructions](instructions.html) page.
@@ -33,19 +33,36 @@ When confronted with a rail junction, the servo has a choice of which direction 
 
 0. If there is an entry control ![Green Checkmark](textures/blocks/servo/entry_require.png) instruction, it will go that way.
 
-0. If it has encountered a ![Set Direction](textures/blocks/servo/set_direction_side_E.png) that it could not execute, it will go in that direction.
+  ![](screen/move_require.png)
+
+0. If it had encountered a ![Set Direction](textures/blocks/servo/set_direction_side_E.png) pointing in a direction that it could not take, it will go in that direction.
+
+  ![](screen/move_pacman.png)
 
 0. It prefers to go straight.
 
-0. It tries to go in the direction it was moving previously (this makes it zig-zag). For example, if it reaches a T intersection after a left turn, it will go right.
+  ![](screen/move_straight.png)
 
-0. If it can not go straight, then it will try to go up (relative to the servo), or down.
+0. It tries to go in the direction it was moving previously (this makes it zig-zag).
+For example, if it reaches a T intersection after a left turn, it will go right.
 
-0. Failing that, it will go right or left, at random.
+  ![](screen/move_zig_zag.png)
+
+0. If it can not go straight, then it will try to go up (relative to the servo).
+
+  ![](screen/move_up.png)
+
+0. Failing that, it will go randomly choose right, left, or down (again, relative to the servo).
+
+  ![](screen/move_random.png)
 
 0. It avoids going through a forbidding entry control ![Red x mark](textures/blocks/servo/entry_forbid.png); this is the second-to-last resort.
 
+  ![](screen/move_forbid.png)
+
 0. It won't go backwards unless it is at a dead-end.
+
+  ![](screen/move_deadend.png)
 
 <small><i>(Probably.)</i></small>
 
