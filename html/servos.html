@@ -25,7 +25,7 @@ Servos travel along the servo rail, and execute instructions as they pass over t
 The Logic Matrix Programmer is used to modify and remove them.</p>
 
 <p>Shift-right clicking with an LMP will remove it from the rail.
-Right clicking an instruction will cycle it to a different version of it.
+Right clicking an instruction will cycle through variants of the instruction, if that instruction has them.
 Clicking on an instruction empty-handed <em>may</em> show a notification indicating its state.</p>
 
 <p>For details on specific instructions, see the <a href="instructions.html">Instructions</a> page.</p>
@@ -40,14 +40,31 @@ Presently the only decorators are the three grates; their purposes is to plug up
 <p>When confronted with a rail junction, the servo has a choice of which direction to go.</p>
 
 <ol>
-<li><p>If there is an entry control <img src="textures/blocks/servo/entry_require.png" alt="Green Checkmark" title="" /> instruction, it will go that way.</p></li>
-<li><p>If it has encountered a <img src="textures/blocks/servo/set_direction_side_E.png" alt="Set Direction" title="" /> that it could not execute, it will go in that direction.</p></li>
-<li><p>It prefers to go straight.</p></li>
-<li><p>It tries to go in the direction it was moving previously (this makes it zig-zag). For example, if it reaches a T intersection after a left turn, it will go right.</p></li>
-<li><p>If it can not go straight, then it will try to go up (relative to the servo), or down.</p></li>
-<li><p>Failing that, it will go right or left, at random.</p></li>
-<li><p>It avoids going through a forbidding entry control <img src="textures/blocks/servo/entry_forbid.png" alt="Red x mark" title="" />; this is the second-to-last resort.</p></li>
-<li><p>It won't go backwards unless it is at a dead-end.</p></li>
+<li><p>If there is an entry control <img src="textures/blocks/servo/entry_require.png" alt="Green Checkmark" title="" /> instruction, it will go that way.</p>
+
+<p><img src="screen/move_require.png" alt="" title="" /></p></li>
+<li><p>If it had encountered a <img src="textures/blocks/servo/set_direction_side_E.png" alt="Set Direction" title="" /> pointing in a direction that it could not take, it will go in that direction.</p>
+
+<p><img src="screen/move_pacman.png" alt="" title="" /></p></li>
+<li><p>It prefers to go straight.</p>
+
+<p><img src="screen/move_straight.png" alt="" title="" /></p></li>
+<li><p>It tries to go in the direction it was moving previously (this makes it zig-zag).
+For example, if it reaches a T intersection after a left turn, it will go right.</p>
+
+<p><img src="screen/move_zig_zag.png" alt="" title="" /></p></li>
+<li><p>If it can not go straight, then it will try to go up (relative to the servo).</p>
+
+<p><img src="screen/move_up.png" alt="" title="" /></p></li>
+<li><p>Failing that, it will go randomly choose right, left, or down (again, relative to the servo).</p>
+
+<p><img src="screen/move_random.png" alt="" title="" /></p></li>
+<li><p>It avoids going through a forbidding entry control <img src="textures/blocks/servo/entry_forbid.png" alt="Red x mark" title="" />; this is the second-to-last resort.</p>
+
+<p><img src="screen/move_forbid.png" alt="" title="" /></p></li>
+<li><p>It won't go backwards unless it is at a dead-end.</p>
+
+<p><img src="screen/move_deadend.png" alt="" title="" /></p></li>
 </ol>
 
 <p><small><i>(Probably.)</i></small></p>
