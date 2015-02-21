@@ -1,3 +1,3 @@
-[Go to the documentation](http://purpleposeidon.github.io/FzDocs/html/)
+[Go to the documentation](http://purpleposeidon.github.io/FzDocs/)
 
 
