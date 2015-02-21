@@ -1,0 +1,18 @@
+body {
+    background-color: #EBEBE2;
+    font-family: "Liberation Sans", Arial, Helvetica, FreeSans, sans-serif;
+}
+
+.items, .blocks {
+    background-color: gray;
+
+    /* http://stackoverflow.com/questions/8597081/how-to-stretch-images-with-no-antialiasing */
+    image-rendering: -moz-crisp-edges;
+    image-rendering: -o-crisp-edges;
+    image-rendering: -webkit-optimize-contrast;
+    -ms-interpolation-mode: nearest-neighbor;
+    image-rendering: pixelated;
+
+    width: 32px;
+    height: auto;
+}

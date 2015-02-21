@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>The Factorization Manual</title>
+<link rel="stylesheet" type="text/css" href="/FzDocs/man.css">
+
+</head>
+<body>
+
+
+<h1>Subroutine</h1>
+ <br>
+This instruction tells the servo to execute other instructions, one after the other. <br>
+But first, the instructions must be loaded into the subroutine. <br>
+Start by laying out, on powered servo rail, the instructions you want for the subroutine. <br>
+Place two servo rails on each end of the instruction list. <br>
+At the beginning, leave the first extra rail blank, and on the second rail put the <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Entry Action instruction, set to read mode by clicking on it with an <a href="/FzDocs/lmp.html">LMP</a>. <br>
+At the very end, place the  <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> trap instruction, and before that, use <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Entry Action again, except this time in "Execute Immediately" mode. <br>
+Place the servo at the beginning, on the blank rail. <br>
+It should read in the instructions between the Entry Actions, and then stop. <br>
+Shift click the servo with an empty Instruction Group to load the instructions into the Subroutine. <br>
+<h2>Multiply By 2</h2>
+ [Servo Start] <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Entry Action: read to stack <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Push Integer: 1 <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Push Integer: 1 <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Sum <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Product <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Entry Action: execute immediately <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Trap <br>
+<h2>8</h2>
+ [Servo Start] <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Push Integer: 1 <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Push Integer: 1 <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Sum <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Dup <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Sum <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Dup <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Sum <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Trap <br>
+<br>
+<u>Workbench</u> <br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> <b>Subroutine</b><br>
+<img class="blocks" src="/FzDocs/resources/factorization/textures/blocks/servo/instruction_plate.png" /><img class="items" src="/FzDocs/resources/minecraft/textures/items/slimeball.png" /><img class="items" src="/FzDocs/resources/factorization/textures/items/tool/matrix_programmer.png" /><br>
+<br>
+<img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> <b>Subroutine</b><br>
+Shapeless: <img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /><br>
+ <br>
+</body>
+</html>

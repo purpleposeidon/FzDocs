@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<title>The Factorization Manual</title>
+<link rel="stylesheet" type="text/css" href="/FzDocs/man.css">
+
+</head>
+<body>
+
+
+<h1>Servo Stacks</h1>
+ <br>
+Each servo has 2 lists of memory. You can see the contents of these lists by looking at the servo with an <a href="/FzDocs/lmp.html">LMP</a> handy. <br>
+The left stack holds values; when instructions modify a stack, it is typically the left stack. <br>
+The right stack holds instructions; the <a href="/FzDocs/instructions/subroutine.html">Subroutine</a> instruction will add other instructions to this stack. The instructions will be popped from the stack and executed until the stack is empty. <br>
+</body>
+</html>
