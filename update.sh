@@ -13,4 +13,4 @@ git checkout master *
 
 wget -r http://localhost/FzDocs/ || true
 mv localhost/FzDocs/* ./
-rmdir -rf localhost
+rm -rf localhost

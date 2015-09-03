@@ -17,13 +17,13 @@ It requires <a href="/FzDocs/charge.html">charge</a> to power its motor, and it 
 If a mob or player steps in front of the spinning blades, they will get hurt. Mobs killed in this way have a small chance to drop XP. <br>
 The lacerator will break blocks that are in front of it. How long it takes to break the block depends on that block's hardness. Two lacerators facing each-other with a block in between them will break the block especially quickly. <br>
 Many blocks will be broken down when mined by the lacerator. For example, smoothstone becomes cobblestone, and iron ore becomes dirty iron gravel. <br>
-The lacerator can not break barrels. Instead, it will process the contents of the barrel. <br>
-Items dropped by killed entities and broken blocks will be put into an internal buffer, which will be drained into the backing inventory. If the buffer can't be emptied, then the lacerator will become clogged and will stop operating. <br>
+The lacerator can not break barrels. Instead, it will process the contents of the barrel. This allows the lacerator to process things that aren't blocks, but this will usually be slower than breaking the actual blocks since the lacerator is optimized for stone-breaking, not wood-chopping. <br>
+Items dropped by killed entities and broken blocks will be put into an internal buffer, which will be drained into the backing inventory. If the buffer can't be emptied, then the lacerator will become clogged and will stop operating. Punching a clogged lacerator will unclog it. <br>
 A redstone signal will disable the lacerator. <br>
  <br>
- <br>
+ An issue of special mention is that lacerators mounted on <a href="/FzDocs/servo.html">servos</a> can break nearby <a href="/FzDocs/servorail.html">servo rail</a> when making turns. Here are two ways of dealing with this: <br> •Always keep the servo pointed outwards when making turns. This will keep it from facing the fragile servo rail. <br> •Use the <a href="/FzDocs/instructions/interact.html">Socket Powered</a> instruction to keep the lacerator safely disabled when it is not needed. <br>
 <br>
-<u>Workbench</u> <br>
+<u>Workbench.name</u> <br>
 <img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_cutting_head.png" /> <b>Diamond Cutting Head</b><br>
 <img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_shard.png" /><img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_shard.png" /><img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_shard.png" /><br>
 <img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_shard.png" /><img class="blocks" src="/FzDocs/resources/minecraft/textures/blocks/iron_block.png" /><img class="items" src="/FzDocs/resources/factorization/textures/items/diamond_shard.png" /><br>
