@@ -1,6 +1,12 @@
 body {
     background-color: #EBEBE2;
+    color: #444;
     font-family: "Liberation Sans", Arial, Helvetica, FreeSans, sans-serif;
+    margin: 40px auto;
+    max-width: 650px;
+    line-height: 1.6;
+    font-size: 18px;
+    padding:0 10px;
 }
 
 .items, .blocks {
@@ -16,3 +22,9 @@ body {
     width: 32px;
     height: auto;
 }
+
+h1, h2, h3 {
+    line-height:1.2;
+}
+
+// http://bettermotherfuckingwebsite.com/
