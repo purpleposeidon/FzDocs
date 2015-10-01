@@ -11,6 +11,6 @@ git checkout gh-pages
 rm -rf * #Deletes this very script, but that's fine.
 git checkout master *
 
-wget -r http://localhost/FzDocs/ || true
-mv localhost/FzDocs/* ./
-rm -rf localhost
+wget -r http://localhost:8000/FzDocs/ || true
+mv localhost*/FzDocs/* ./
+rm -rf localhost*
