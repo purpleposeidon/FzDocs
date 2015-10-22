@@ -11,30 +11,30 @@
 
 <h1>Interaction Instructions</h1>
  <br>
-<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Redstone Pulse</h2>
+<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />Redstone Pulse</h2>
  <br>
 This causes a redstone pulse to be emitted from the servo rail. Note that this <i>can</i> cause nearby instructions to be temporarily disabled. <br>
-<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Read Redstone</h2>
+<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />Read Redstone</h2>
  <br>
 Measures the redstone power in the direction the servo is facing. If there is no signal, then it will push 0. If this instruction is laid on a servo rail, and it is receiving a direct redstone signal, then of course it will not work. To avoid this problem the signal must run along or underneath the servo rail. <br>
-<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Socket Signal</h2>
+<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />Socket Signal</h2>
  <br>
 This sends a redstone signal, not to the world, but to the socket tool attatched to the servo. <br>
 It has three modes: <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_pulse.png" />Socket Pulse: the socket will recieve a brief redstone signal. <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_on.png" />Socket Powered: the socket will recieve a constant ON signal. <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_off.png" />Socket Unpowered: the socket will recieve a constant OFF signal. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_pulse.png" />Socket Pulse: the socket will recieve a brief redstone signal. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_on.png" />Socket Powered: the socket will recieve a constant ON signal. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/socket_off.png" />Socket Unpowered: the socket will recieve a constant OFF signal. <br>
 If a socket pulse is sent when Socket Powered is active, then the signal will flicker off. <br>
-<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Count Items</h2>
+<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />Count Items</h2>
  <br>
 Counts how many items are held by the servo. This instruction can run without an item shifter installed. <br>
-<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> Item Shifter Control</h2>
+<h2><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />Item Shifter Control</h2>
  <br>
 This instruction modifies <a href="/FzDocs/itemshifter.html">Item Shifter</a> settings. So of course it only works if there's an item shifter installed on the servo. <br>
 There are several modes; most of them correspond to the <a href="/FzDocs/lmp.html">LMP</a> configuration on the Item Shifter. Clicking on the instruction with an <a href="/FzDocs/lmp.html">LMP</a> will cycle through the modes. <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_target_slot.png" /> Set Transfer Limit: reads an integer. <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_transfer_limit.png" /> Set Target Slot: reads an integer; if it is -1 then the shifter will target any slot. <br>
-<img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_probe.png" /> Probe: Counts how many items in the inventory match the target inventory. This pushes an integer. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_target_slot.png" />Set Transfer Limit: reads an integer. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_transfer_limit.png" />Set Target Slot: reads an integer; if it is -1 then the shifter will target any slot. <br>
+<img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/ctrl/shift_probe.png" />Probe: Counts how many items in the inventory match the target inventory. This pushes an integer. <br>
 If there was no inventory, then it pushes -1. If the item shifter had a target slot set, but that target slot was out of range of the inventory, then it pushes -1. <br>
 If the servo is holding no item, then it will count all items in the inventory. <br>
 <br>

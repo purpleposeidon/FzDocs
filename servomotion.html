@@ -12,13 +12,13 @@
 <h1>Servo Motion</h1>
  <br>
 When confronted with a rail junction, the servo has a choice of which direction to go.  <br>
-If there is an <a href="/FzDocs/entrycontrol.html"><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> entry control</a> instruction, it will go that way. <br>
-It will try to go in the direction pointed by  <a href="/FzDocs/setdirection.html"><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" /> set direction</a>. <br>
+If there is an <a href="/FzDocs/entrycontrol.html"><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />entry control</a> instruction, it will go that way. <br>
+It will try to go in the direction pointed by  <a href="/FzDocs/setdirection.html"><img class="items" src="/FzDocs/resources/factorization/textures/items/transparent_item.png" />set direction</a>. <br>
 It prefers to go straight. <br>
 It tries to go in the direction it was moving previously (this makes it zig-zag). For example, if it reaches a T intersection after a left turn, it will go right. <br>
 If it can not go straight, then it will try to go up (relative to the servo). <br>
 Failing that, it will go randomly choose right, left, or down (again, relative to the servo). <br>
-It avoids going through a <a href="/FzDocs/entrycontrol.html"><img src="/FzDocs/resources/factorization/textures/textures/blocks/servo/entry_forbid.png" />forbidding entry control</a>; this is the second-to-last resort. <br>
+It avoids going through a <a href="/FzDocs/entrycontrol.html"><img width=16 height=16 src="/FzDocs/resources/factorization/textures/textures/blocks/servo/entry_forbid.png" />forbidding entry control</a>; this is the second-to-last resort. <br>
 It won't go backwards unless it is at a dead-end. <br>
 Servos will not enter a rails if they have conflicting <a href="/FzDocs/servocolor.html">colors</a>. </body>
 </html>
